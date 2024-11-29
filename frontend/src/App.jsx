@@ -1,8 +1,8 @@
 import React from 'react';
 // Corrected the typo in import paths for components
-import Navbar from './components/Navbar.jsx';  // Fixed typo 'comonents' -> 'components'
-import Home from "./components/Home.jsx";  // Fixed typo 'comonents' -> 'components'
-import Footer from "./components/Footer.jsx";  // Fixed typo 'comonents' -> 'components'
+import Navbar from './comonents/Navbar.jsx';  // Fixed typo 'comonents' -> 'components'
+import Home from "./comonents/Home.jsx";  // Fixed typo 'comonents' -> 'components'
+import Footer from "./comonents/Footer.jsx";  // Fixed typo 'comonents' -> 'components'
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import Blogs from "../src/pages/Blogs.jsx";
 import About from "../src/pages/About.jsx";
