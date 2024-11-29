@@ -1,7 +1,8 @@
 import React from 'react';
-import Navbar from './components/Navbar.jsx';  // Fixed the typo: 'comonents' -> 'components'
-import Home from "./components/Home.jsx";  // Fixed the typo: 'comonents' -> 'components'
-import Footer from "./components/Footer.jsx";  // Fixed the typo: 'comonents' -> 'components'
+// Corrected the typo in import paths for components
+import Navbar from './components/Navbar.jsx';  // Fixed typo 'comonents' -> 'components'
+import Home from "./components/Home.jsx";  // Fixed typo 'comonents' -> 'components'
+import Footer from "./components/Footer.jsx";  // Fixed typo 'comonents' -> 'components'
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import Blogs from "../src/pages/Blogs.jsx";
 import About from "../src/pages/About.jsx";
@@ -14,7 +15,7 @@ import { useAuth } from './context/AuthProvider';
 import { Toaster } from 'react-hot-toast';
 import UpdateBlog from './dashboard/UpdateBlog.jsx';
 import Detail from './pages/Detail.jsx';
-// import NotFound from './pages/NotFound'; // Make sure the NotFound component exists and is correctly located
+// import NotFound from './pages/NotFound'; // Uncomment if you want to use this component
 
 function App() {
   const location = useLocation();
@@ -52,7 +53,6 @@ function App() {
 }
 
 export default App;
-
 
 // import React from 'react';
 // import Navbar from './comonents/Navbar.jsx';
