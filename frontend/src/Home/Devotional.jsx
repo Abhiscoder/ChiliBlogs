@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 
 function Devotional() {
   const { blogs } = useAuth();
-  // console.log("Technology_BLOG:", blogs);
+  console.log("Technology_BLOG:", blogs);
   const techBlogs = blogs?.filter((blog) => 
     blog.category === "Technology");
-  // console.log("Category_Technology:",techBlogs);
+  console.log("Category_Technology:",techBlogs);
   return (
     <div>
       <div className='container mx-auto my-12 p-4'>
