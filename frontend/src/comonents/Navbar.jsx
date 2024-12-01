@@ -7,7 +7,7 @@ import axios from 'axios';
 import toast from "react-hot-toast";
 
 // Use the backend URL from the environment variables
-// const {BACKEND_URL} from './utils';
+// import {BACKEND_URL} from './utils';
 // const BACKEND_URL = "https://chiliblogs.onrender.com"
 
 function Navbar() {
