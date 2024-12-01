@@ -23,7 +23,7 @@ function MyBlog() {
   }, []);
 
   const handleDelete = async(id) =>{
-    const BACKEND_URL = "https://chiliblogs.onrender.com"
+    // const BACKEND_URL = "https://chiliblogs.onrender.com"
     await axios.delete(`{BACKEND_URL}/api/blogs/delete/${id}`,{withCredentials: true})
     .then((res) =>{
       toast.success(res.data.messsage || "Blog delete Successfully.");
