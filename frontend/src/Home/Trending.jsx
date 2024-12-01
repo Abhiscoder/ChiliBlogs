@@ -25,7 +25,7 @@ function Trending() {
     },
   };
 
-  // console.log("trending:", { blogs });
+  console.log("trending:", { blogs });
   return (
     <div className='container mx-auto'>
       <h1 className='text-2xl font-semibold mb-4'>Trending</h1>
