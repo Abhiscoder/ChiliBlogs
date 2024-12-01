@@ -60,7 +60,7 @@ function UpdateBlog() {
     }
 
     try {
-      const { data } = await axios.put(`{BACKEND_URL}/api/blogs/update/${id}`, formData, {
+      const { data } = await axios.put(`${BACKEND_URL}/api/blogs/update/${id}`, formData, {
         withCredentials: true,
         headers: {
           "Content-Type": "multipart/form-data",
