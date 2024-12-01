@@ -10,7 +10,7 @@ function Detail() {
     useEffect(() => {
         const fetchblogs = async () => {
             try {
-                const { data } = await axios.get(`{BACKEND_URL}/api/blogs/single-blog/${id}`, {
+                const { data } = await axios.get(`${BACKEND_URL}/api/blogs/single-blog/${id}`, {
                     withCredentials: true,
                     headers: {
                         "Content-Type": "application/json",
