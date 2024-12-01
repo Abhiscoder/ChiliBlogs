@@ -5,6 +5,7 @@ import { useAuth } from "../context/AuthProvider";
 import toast from 'react-hot-toast';
 
 const Register = () => {
+  const BACKEND_URL = "https://chiliblogs.onrender.com"
   const {isAuthenticated, setIsAuthenticated, setProfile} = useAuth();
   const navigateTo = useNavigate();
 
@@ -40,7 +41,7 @@ const Register = () => {
     formData.append('education', education);
     formData.append('photo', photo);
     try {
-      const { data } = await axios.post('http://localhost:4001/api/users/register', formData,{
+      const { data } = await axios.post(`{BACKEND_URL}/api/users/register`, formData,{
         withCredentials: true,
         headers:{
           "Content-Type":"multipart/form-data",
