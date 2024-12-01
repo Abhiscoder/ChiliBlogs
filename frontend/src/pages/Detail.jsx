@@ -3,13 +3,14 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 
 function Detail() {
+    const BACKEND_URL = "https://chiliblogs.onrender.com"
     const { id } = useParams();
     const [blogs, setBlogs] = useState({});
     console.log("Details_blog:",blogs);
     useEffect(() => {
         const fetchblogs = async () => {
             try {
-                const { data } = await axios.get(`http://localhost:4001/api/blogs/single-blog/${id}`, {
+                const { data } = await axios.get(`{BACKEND_URL}/api/blogs/single-blog/${id}`, {
                     withCredentials: true,
                     headers: {
                         "Content-Type": "application/json",
