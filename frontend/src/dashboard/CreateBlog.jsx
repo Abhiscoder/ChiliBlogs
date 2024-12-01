@@ -1,8 +1,8 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import toast from 'react-hot-toast';
-import { BACKEND_URL } from './utils'; // Import the BACKEND_URL from utils.js
-
+// import { BACKEND_URL } from './utils'; // Import the BACKEND_URL from utils.js
+// const BACKEND_URL = "https://chiliblogs.onrender.com"
 function CreateBlog() {
 
   const [title, setTitle] = useState("");
@@ -24,6 +24,7 @@ function CreateBlog() {
 
   const handleCreateBlog = async (e) => {
     e.preventDefault();
+    const BACKEND_URL = "https://chiliblogs.onrender.com"
     const formData = new FormData();
     formData.append('title', title);
     formData.append('category', category);
