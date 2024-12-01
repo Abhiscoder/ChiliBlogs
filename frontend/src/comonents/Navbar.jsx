@@ -7,9 +7,11 @@ import axios from 'axios';
 import toast from "react-hot-toast";
 
 // Use the backend URL from the environment variables
-const {BACKEND_URL} from './utils';
+// const {BACKEND_URL} from './utils';
+// const BACKEND_URL = "https://chiliblogs.onrender.com"
 
 function Navbar() {
+  const BACKEND_URL = "https://chiliblogs.onrender.com"
   const [show, setShow] = useState(false);
   const { profile, isAuthenticated, setIsAuthenticated, setProfile } = useAuth();
   console.log("Nave_profile: ", profile?.user);
