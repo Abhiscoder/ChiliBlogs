@@ -16,9 +16,9 @@ function Sidebar({setComponent}) {
     const [show, setShow] = useState(false);
 
     const handleComponents = (value) => {
-        // console.log("setComponnt:",setComponent);
+        console.log("setComponnt:",setComponent);
         setComponent(value);
-        // console.log("setComponet_Value",value);
+        console.log("setComponet_Value",value);
     };
     const gotoHome = () => {
         navigateTo('/');
@@ -28,7 +28,7 @@ function Sidebar({setComponent}) {
         e.preventDefault();
         try {
             const { data } = await axios.get(
-                `{BACKEND_URL}/api/users/logout`, { withCredentials: true }
+                `${BACKEND_URL}/api/users/logout`, { withCredentials: true }
             );
             toast.success(data.message);
             localStorage.removeItem("jwt"); //delete localstorage token
