@@ -4,6 +4,7 @@ import toast from 'react-hot-toast';
 import { useNavigate, useParams } from 'react-router-dom';
 
 function UpdateBlog() {
+  const BACKEND_URL = "https://chiliblogs.onrender.com"
   const navigateTo = useNavigate();
   const { id } = useParams();
   const [title, setTitle] = useState("");
@@ -27,7 +28,7 @@ function UpdateBlog() {
   useEffect(() => {
     const fetchBlog = async () => {
       try {
-        const { data } = await axios.get(`http://localhost:4001/api/blogs/single-blog/${id}`, {
+        const { data } = await axios.get(`{BACKEND_URL}/api/blogs/single-blog/${id}`, {
           withCredentials: true,
           headers: {
             "Content-Type": "multipart/form-data",
@@ -59,7 +60,7 @@ function UpdateBlog() {
     }
 
     try {
-      const { data } = await axios.put(`http://localhost:4001/api/blogs/update/${id}`, formData, {
+      const { data } = await axios.put(`{BACKEND_URL}/api/blogs/update/${id}`, formData, {
         withCredentials: true,
         headers: {
           "Content-Type": "multipart/form-data",
