@@ -3,9 +3,10 @@ import React, { useState } from 'react';
 import toast from 'react-hot-toast';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthProvider';
-import { BACKEND_URL } from './utils'; // Import the BACKEND_URL
+// import { BACKEND_URL } from './utils'; // Import the BACKEND_URL
 
 function Login() {
+  const BACKEND_URL = "https://chiliblogs.onrender.com"
   const { isAuthenticated, setIsAuthenticated, setProfile } = useAuth();
   const navigateTo = useNavigate();
   
