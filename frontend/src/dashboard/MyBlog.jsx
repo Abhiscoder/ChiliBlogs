@@ -2,7 +2,6 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import toast from 'react-hot-toast';
 import { Link, useNavigate } from 'react-router-dom';
-// const BACKEND_URL = "https://chiliblogs.onrender.com"
 
 function MyBlog() {
   const BACKEND_URL = "https://chiliblogs.onrender.com"
@@ -12,8 +11,8 @@ function MyBlog() {
   useEffect(() => {
     const fetchMyBlogs = async () => {
       try {
-        const { data } = await axios.get(`{BACKEND_URL}/api/blogs/my-blog`, { withCredentials: true });
-        // console.log("myBlog:", data);
+        const { data } = await axios.get(`${BACKEND_URL}/api/blogs/my-blog`, { withCredentials: true });
+        console.log("myBlog:", data);
         setMyBlog(data);
       } catch (error) {
         console.log("MYBLOG:",error);
@@ -23,8 +22,7 @@ function MyBlog() {
   }, []);
 
   const handleDelete = async(id) =>{
-    // const BACKEND_URL = "https://chiliblogs.onrender.com"
-    await axios.delete(`{BACKEND_URL}/api/blogs/delete/${id}`,{withCredentials: true})
+    await axios.delete(`${BACKEND_URL}/api/blogs/delete/${id}`,{withCredentials: true})
     .then((res) =>{
       toast.success(res.data.messsage || "Blog delete Successfully.");
       navigateTo("/");
