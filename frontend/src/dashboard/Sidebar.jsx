@@ -7,6 +7,8 @@ import { BiSolidLeftArrowAlt } from 'react-icons/bi';
 import toast from 'react-hot-toast';
 
 function Sidebar({setComponent}) {
+    const BACKEND_URL = "https://chiliblogs.onrender.com"
+    
     const { profile, setIsAuthenticated } = useAuth();
 
     const navigateTo = useNavigate();
@@ -26,7 +28,7 @@ function Sidebar({setComponent}) {
         e.preventDefault();
         try {
             const { data } = await axios.get(
-                "http://localhost:4001/api/users/logout", { withCredentials: true }
+                `{BACKEND_URL}/api/users/logout`, { withCredentials: true }
             );
             toast.success(data.message);
             localStorage.removeItem("jwt"); //delete localstorage token
