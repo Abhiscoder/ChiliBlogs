@@ -1,13 +1,10 @@
 import axios from 'axios';
 import React, { createContext, useContext, useEffect, useState } from 'react';
-// import {BACKEND_URL} from '../utils';
-// const BACKEND_URL = "https://chiliblogs.onrender.com"
 // import Cookies from "js-cookie";
 export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
     const BACKEND_URL = "https://chiliblogs.onrender.com"
-
     const [blogs, setBlogs] = useState();  //blogs is a variable and setBlogs is a function and useState is a hook.
     const [profile, setProfile] = useState();
     const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -27,7 +24,7 @@ export const AuthProvider = ({ children }) => {
                     }
                     );
                     console.log("Auth_Profile:", data);
-                    // console.log("Auth_Profile:", data.user?.photo.url);
+                    console.log("Auth_Profile_PHOTO_URL:", data.user?.photo.url);
                     setProfile(data);
                     setIsAuthenticated(true);
                 } else {
