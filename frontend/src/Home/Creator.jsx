@@ -3,9 +3,11 @@ import React, { useEffect, useState } from 'react';
 
 // Use the backend URL from the environment variables
 // const {BACKEND_URL} form './utils.js';
-const {BACKEND_URL} form '../utils';
+// const {BACKEND_URL} form '../utils';
+
 
 function Creator() {
+  const BACKEND_URL = "https://chiliblogs.onrender.com"
   const [admin, setAdmin] = useState([]);
 // console.log("admins:",admin);
 
