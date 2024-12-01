@@ -1,10 +1,12 @@
 import axios from 'axios';
 import React, { createContext, useContext, useEffect, useState } from 'react';
-import {BACKEND_URL} from '../utils';
+// import {BACKEND_URL} from '../utils';
+// const BACKEND_URL = "https://chiliblogs.onrender.com"
 // import Cookies from "js-cookie";
 export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
+    const BACKEND_URL = "https://chiliblogs.onrender.com"
 
     const [blogs, setBlogs] = useState();  //blogs is a variable and setBlogs is a function and useState is a hook.
     const [profile, setProfile] = useState();
