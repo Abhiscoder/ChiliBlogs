@@ -80,7 +80,7 @@ function Navbar() {
               <Link to="/about" onClick={() => setShow(!show)} className="hover:text-blue-500">ABOUT</Link>
               <Link to="/contact" onClick={() => setShow(!show)} className="hover:text-blue-500">CONTACT</Link>
 
-              {/* Mobile Buttons for Dashboard and Logout
+              Mobile Buttons for Dashboard and Logout
               <div className="w-full mt-4 flex flex-col space-y-2">
                 {isAuthenticated && profile?.user?.user?.role === "admin" && (
                   <Link to="/Dashboard" onClick={() => setShow(!show)} className="bg-blue-600 text-white font-semibold hover:bg-blue-800 duration-300 px-4 py-2 rounded w-full">
@@ -96,7 +96,7 @@ function Navbar() {
                     LOGOUT
                   </button>
                 )}
-              </div> */}
+              </div>
             </ul>
           </div>
         )}
